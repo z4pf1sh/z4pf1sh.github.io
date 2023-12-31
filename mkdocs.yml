@@ -1,0 +1,104 @@
+site_name: The Depths
+site_url: https://z4pf1sh.github.io/
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to Light Mode
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      primary: white
+      accent: blue
+      toggle:
+        icon: material/beach
+        name: Switch to Dark Mode
+    - scheme: slate
+      media: "(prefers-color-scheme: dark)"
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/fish
+        name: Switch to System Setting
+  logo: assets/icon.svg
+  favicon: assets/icon-128.png
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      While the site maintainer does not directly collect any data from you,
+      this site uses GitHub Pages for hosting. You may be subject to their
+      respective Privacy Policies and Terms of Service.
+    cookies:
+      github:
+        name: GitHub
+        checked: false
+    actions:
+      - reject
+      - accept
+      - manage
+copyright: Copyright &copy; 2023 - 2024 z4pf1sh. <a href="#__consent">Manage cookie settings</a>.
+plugins:
+  - blog:
+      blog_dir: .
+  - search
+  - social:
+      enabled: !ENV [CI, false]
+      cards_layout_options:
+        font_family: Noto Sans SC
+        background_color: beige
+        color: "#070707"
+  - privacy:
+      enabled: !ENV [CI, false]
+      assets: true
+      assets_fetch: true
+  - rss:
+      match_path: posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+  - glightbox
+markdown_extensions:
+  - abbr
+  - toc:
+     permalink: true
+  - attr_list
+  - md_in_html
+  - admonition
+  - def_list
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
