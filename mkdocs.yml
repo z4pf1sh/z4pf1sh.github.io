@@ -49,7 +49,7 @@ extra:
       - reject
       - accept
       - manage
-copyright: Copyright &copy; 2023 - 2024 z4pf1sh. Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>. <a href="#__consent">Manage cookie settings</a>.
+copyright: Copyright &copy; 2023 - 2024 z4pf1sh // Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a> except where otherwise noted // <a href="#__consent">Manage cookie settings</a>
 plugins:
   - blog:
       blog_dir: .
