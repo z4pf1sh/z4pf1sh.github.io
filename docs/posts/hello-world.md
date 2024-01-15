@@ -71,7 +71,11 @@ In order to comply with regulations, a simple Privacy Policy was put together an
 
 The TL;DR is that we, the site maintainers do not collect **any** data from you. Therefore there is no way for us to share or sell your data. Even if we did somehow collect your information, we would not share or sell it anyways.
 
+The Privacy Policy may be updated without prior notifications.
+
 The service provider of this site is GitHub Pages by GitHub, Inc., a subsidiary of Microsoft Corporation. You may refer to [About GitHub Pages :material-arrow-right: Data collection :octicons-link-external-16:](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection) for more information.
+
+[Google Fonts :octicons-link-external-16:](https://fonts.google.com) hosted by Google LLC provides fonts delivery for this site. You may refer to [Google Fonts :material-arrow-right: Privacy and Data Collection :octicons-link-external-16:](https://developers.google.com/fonts/faq/privacy) for more information.
 
 [^1]: Definitely not British, you will NOT see words like "**programme**" and "**aluminium**" here.
 [^2]: Google, Inc. used to be my favorite company, but never for Google LLC.
