@@ -4,10 +4,6 @@ extra_css:
   - stylesheets/fonts.css
 theme:
   name: material
-  font:
-    # Include Roboto Slab to enable font loading, actual fonts
-    # list will be overridden in fonts.css
-    text: Roboto Slab
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -45,8 +41,8 @@ extra:
     title: Cookie consent
     description: >-
       While the site maintainer does not directly collect any data from you,
-      this site uses GitHub Pages for hosting. You may be subject to their
-      respective Privacy Policies and Terms of Service.
+      this site uses GitHub Pages for hosting and Google Fonts for fonts delivery.
+      You may be subject to their respective Privacy Policies and Terms of Service.
     cookies:
       github:
         name: GitHub
