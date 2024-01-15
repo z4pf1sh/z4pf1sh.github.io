@@ -1,7 +1,13 @@
 site_name: The Depths
 site_url: https://z4pf1sh.github.io/
+extra_css:
+  - stylesheets/fonts.css
 theme:
   name: material
+  font:
+    # Include Roboto Slab to enable font loading, actual fonts
+    # list will be overridden in fonts.css
+    text: Roboto Slab
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
