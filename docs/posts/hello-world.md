@@ -41,11 +41,11 @@ Or maybe better, use [Firefox :octicons-link-external-16:](https://mozilla.org/f
 
 ### What was this site built with?
 
-See the footer, it is [mkdocs-material :octicons-link-external-16:](https://squidfunk.github.io/mkdocs-material/). I personally invite you to give it a star, it's awesome.
+See the footer, it is [mkdocs-material :octicons-link-external-16:](https://squidfunk.github.io/mkdocs-material/). I personally invite you to give it a star, it’s awesome.
 
 ### Why did not you use alternatives like Hexo or Jekyll?
 
-It has got complete features for blogging and advanced formatting. Plus, I personally find it ironic that Google[^2] themselves are no longer doing Material Design right. Heck, even Microsoft's latest Fluent Design is heavily inspired by Google. Just look at the hamburger menu!
+It has got complete features for blogging and advanced formatting. Plus, I personally find it ironic that Google[^2] themselves are no longer doing Material Design right. Heck, even Microsoft’s latest Fluent Design is heavily inspired by Google. Just look at the hamburger menu!
 
 If you miss the good old Material days, visit [m1.material.io :octicons-link-external-16:](https://m1.material.io/).
 
