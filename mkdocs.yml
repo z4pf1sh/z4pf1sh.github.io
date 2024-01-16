@@ -1,7 +1,7 @@
 site_name: The Depths
 site_url: https://z4pf1sh.github.io/
 extra_css:
-  - stylesheets/fonts.css
+  - stylesheets/extra.css
 theme:
   name: material
   palette:
