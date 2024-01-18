@@ -5,6 +5,7 @@ categories:
   - technology
   - microsoft
   - windows
+  - winui
   - ui
 authors:
   - z4pf1sh
@@ -89,9 +90,9 @@ On Microsoft’s side, to make Windows run (well) on tablet computers, would obv
 
 > Windows PCs will continue to adapt and evolve, and Windows will be everywhere on every kind of device without compromise.
 >
-> \- Steve Ballmer, Microsoft CEO[^5]
+> — Steve Ballmer, former CEO of Microsoft[^5]
 
-Good one, Steve. As part of their plan, the next generation of Windows would feature:
+Nice one, Steve. For readers, please remember the “without compromise” statement, or you may miss some good laughs. As part of their plan, the next generation of Windows would feature:
 
 - A new, touch-friendly UI
 - An app ecosystem like the App Store
@@ -121,7 +122,7 @@ To make x86 platform suitable for mobile computing on tablet computers, Intel’
 
 ### Windows 8
 
-In October 2012[^7], a disaster called Windows 8 was released. To end users, the most obvious change is of course the design. When Windows 8 is first booted, the user is greeted with the OOBE (Out-of-box experience) screen featuring the new, minimalist flat design called “Metro”[^8]. If your graphics drivers are up and ready, the elegant, smooth animations and bold new colors will definitely give you a refreshing feel. Then you’re greeted with the brand new, full-screen Start Menu, maybe leaving you confused: where is my desktop? After spotting a rectangular tile called “Desktop” mixed in other rectangles, and a firm mouse click, congratulations, you have finally found your way to the familiar Windows desktop you know and love[^9]. Home sweet home, the recycle bin, the desktop wallpaper and the taskbar, they are all there, refreshed yet still with the spirit of Windows, and the Start But-wait, hold up, where has the Start Button gone?
+In October 2012[^7], a disaster called Windows 8 was released. To end users, the most obvious change is of course the design. When Windows 8 is first booted, the user is greeted with the OOBE (Out-of-box experience) screen featuring the new, minimalist flat design called “Metro”[^8]. If your graphics drivers are up and ready, the elegant, smooth animations and bold new colors will definitely give you a refreshing feel. Then you’re greeted with the brand new, full-screen Start Menu, maybe leaving you confused: where is my desktop? After spotting a rectangular tile called “Desktop” mixed in other rectangles, and a firm mouse click, congratulations, you have finally found your way to the familiar Windows desktop you know and love[^9]. Home sweet home, the recycle bin, the desktop wallpaper and the taskbar, they are all there, refreshed yet still with the spirit of Windows, and the Start But — wait, hold up, where has the Start Button gone?
 
 Great, now you have it. *It’s not a bug, it’s a feature.*™ The Start Button is officially gone. In Microsoft’s defense, you can still open Start Menu with the Start key on your keyboard, or the physical Start button on your tablet, or in the Charms menu. You can also move your mouse cursor to the bottom left corner of the screen, revealing the Start Button.
 
@@ -131,17 +132,67 @@ It’s already getting very boring and complicated. You thought to your self: �
 
 ### Metro apps
 
-I kept mentioning *Metro* apps, but did you really know what they are? They are also known as “Windows Store apps”, built on the new framework called “Windows Runtime” or WinRT (not to be confused with Windows RT, which we will discuss about later). Contrary to its name, it is not a runtime, but a new set of APIs for a new kind of applications that is *Metro* apps, they are mostly packaged, run in a sandbox, published to and acquired from Microsoft Store (formerly Windows Store), and require permissions and user approvals to use specific functionalities, kind of like on mobile operating systems such as Android and iOS. You can see it as Microsoft’s attempt to bring Android & iOS-style apps to Windows. They all run full-screen, are touch-first, and share the Microsoft Design Language.
+I kept mentioning *Metro* apps, but did you really know what they are? They are also known as “Windows Store apps”, built on the new framework called “Windows Runtime” or WinRT (not to be confused with Windows RT, which we will discuss about later). Contrary to its name, it is not a runtime, but a new set of APIs for a new kind of applications that is *Metro* apps, they are mostly packaged, run in a sandbox, published to and acquired from Microsoft Store (formerly Windows Store), and require permissions and user approvals to use specific functionalities, kind of like on mobile operating systems such as Android and iOS. You can see it as Microsoft’s attempt to bring Android & iOS-style apps to Windows. They all run full-screen, are touch-first, and share the Microsoft Design Language, which is Microsoft’s official name for the widely known *Metro* style.
 
 There you go, after traditional Windows APIs and WPF, here comes the third kind of applications on Windows. The good thing, and also a problem is that they all run on Windows 8. Counting the classic Windows style and the Ribbon UI introduced with Office 2007, Microsoft has already got at least 5 styles of user interfaces and 3 frameworks, scattered across the operating system.
 
+Fortunately, as WPF made so many radical advancements at its time, many of its concepts still carry their legacy till the Windows 8 era. *Metro* — I’ve got tired of this. To make it clear, one of the UI frameworks that came with Windows Runtime is called “Windows UI Library”, or WinUI for short. It’s used to create applications with the Microsoft Design Language. I drew the following diagram in an attempt to make things easier to understand.
+
+![The situation of Windows UI frameworks](../../img/windows-rant/pt1/winui-ancestry.svg)
+
+And don’t forget that all 3 of them have their respective style of UI:
+
+- the latest & greatest Microsoft Design Language
+- mimicked look of Win32 by WPF
+- classic^*(authentic!)*^ Win32 look
+
+The troubling thing is that they **all** run on Windows 8, with a **majority** of applications still on WPF or Win32, running on the desktop, and **only** MDL is touch-optimized by default. Just ask anyone who have used a Windows tablet before about the experience of touching those teeny tiny little buttons and controls designed for precision cursor input. I bet you’ll get negative feedback more often than less. The interfaces that most people interact with daily just simply don’t play well with touch.
+
+As for laptops with a touchscreen, things aren’t getting anywhere better, either. In addition to user interfaces that poorly fit touch input, the touch surface is often vertical and far from user’s normal reach. There’s a famous quote from Jobs:
+
+> Touch surfaces don’t want to be vertical. It gives great demo. But after a short period of time, you start to fatigue. After an extended period of time, your arm wants to fall off. It doesn’t work. It’s ergonomically terrible. Touch surfaces want to be horizontal.
+>
+> — Steve Jobs, founder and former CEO of Apple[^11]
+
 ### Windows RT
+
+Laptops aside, another goal of Windows 8 is to have Windows running on tablet computers, sometimes with ARM processors, just like those it’s trying to compete against. Microsoft decided to launch a special version of Windows 8 dedicated to serve this purpose, which was later revealed as “Windows RT”. Windows RT runs on 32-bit ARMv7 systems. But being on a wholly new hardware architecture, none of the existing applications designed and compiled for x86 processors could run on it. Microsoft has always prioritized compatibility, but this time seems like not the case. As Windows RT strictly limits app choices for users to:
+
+- Pre-loaded Windows desktop software
+- Pre-loaded WinRT apps
+- Windows Store apps[^12]
+
+All of a sudden, all third-party Win32 desktop applications were gone. WinRT became the only viable target for developers trying to develop software for the platform that is Windows RT. Still, could be worse, as Microsoft’s own, flagship development tool, the Visual Studio, has absolutely **ZERO** support for this new platform. To make something for Windows RT, you still need a x86-based Windows PC, install Visual Studio there, do your development, and then deploy to the Windows RT device for testing. It was a huge freaking pain in the arse. Not to mention the situation that WinRT is still broken, as it just plainly lacks the functionalities otherwise available on Win32: there’s no access to the registry (which itself is a mountain of shite and crap), background activities are significantly limited to almost none, filesystem access is tightly restricted, etc.
+
+Mind you, while WinRT is broken, it still has several features that are not available to Win32 applications: new touch-optimized MDL UI, notifications API, Windows settings sync integration, easy acquisition via Windows Store, one-click installation & uninstallation, etc. So, in other words, Win32 applications just plainly lacks the functionalities otherwise available on WinRT, so Win32 is bro...ken? I suppose? There is just no way to have the best of both worlds, and developers are getting increasingly frustrated. As the market for Windows RT is just beginning and is way too small, most developers chose the easy way out: just don’t invest in it and give it up. Yet the move from developers further restricted what users could do with Windows RT devices. It’s a death loop, a chicken-or-the-egg situation. In the end, for most developers and users who have actually tried to used a Windows RT, this is how they often feel like:
+
+![My disappointment is immeasurable and my day is ruined](../../img/windows-rant/pt1/disappointment.png)
+
+The sales numbers clearly, and accurately represented this trainwreck. With poor sales and a $900 million loss, Microsoft only launched two Windows RT devices: the Surface (also known as Surface with Windows RT or Surface RT) and Surface 2. Later when it comes to the number^(3)^ that Gabe Newell allegedly cannot spell, only the Surface Pro stayed, and the numeric edition of Surface is nowhere to be found.
 
 ## Universal Windows
 
+Microsoft’s dream of conquering personal computing with Windows did not simply end with the demise of Windows RT. They still want Windows to run on everything, everywhere. With the release of Windows 10 in 2015, Microsoft fixed many mistakes and reverted many aggressive changes in Windows 8 and 8.1. Plus, two visual updates. First is for the Win32-based applications (a long-observed tradition as Microsoft typically gives them a refresh on major updates). Then, the Microsoft Design Language has officially evolved to MDL2. And good news! You can finally have your WinUI applications windowed instead of full-screen! Despite all the changes, Microsoft actually did not fully remove the Windows 8 legacy from Windows 10. In fact, if you install and open a WinRT app built for Windows 8, a minified Charms menu will appear in the title bar, exposing the features, and flyouts will pop out from the right edge of the app window when you click the corresponding menu items. Compatibility, huh? Heck, Microsoft even kept the Windows 8-style Networks flyout in Windows 10[^13].
+
+For the first time, Microsoft did a significant bump of Windows 10’s NT kernel version from `6.3` in Windows 8 to `10.0` in Windows 10[^14]. And with Windows Phone, Xbox, and later HoloLens, there are 4 versions of Windows 10: Windows 10 Desktop, Windows 10 Mobile, Windows 10 Xbox, and Windows 10 HoloLens, each with their unique features and limitations. It’s now Nadella time[^15], and maybe still vaguely remembering Ballmer’s [:fontawesome-brands-youtube: *Developers* song](https://www.youtube.com/watch?v=XxbJw8PrIkc), Microsoft decided to make developers’ lives a bit easier by putting out a unified platform based on WinRT, called Universal Windows Platform, or UWP for short. And the MDL2 design is now integrated with WinUI 2.
+
+With UWP, aside from the shiny new design, developers can expect to build once on their development machines, and their apps will run on all four editions of Windows 10. Plus a series of practical improvements like .NET Native, `{x:Bind}` support, light and dark mode support, system materials, `{ThemeResource}` namespace and many useful control improvements, including the new, long-awaited `Spacing` property for panel controls supporting automatic layouts. But many of those limits are still there, thus despite these advancements, UWP still cannot replace those creaking ancient Win32 applications in the forseeable future.
+
+To make matters worse, it looks like Microsoft themselves are not into UWP, which is their own work, either. There is still a pile of Windows components with most of their UIs untouched since the Windows 9x days. Just press ++win+r++ for yourself. See how much it’s changed since Windows 98.
+
+![“Run” dialog of Windows 98](../../img/windows-rant/pt1/win98-run.png){ width="400" }
+
+![“Run” dialog of Windows 10](../../img/windows-rant/pt1/win10-run.png){ width="400" }
+
+Nice job Microsoft, you multi-trillion-dollar corporation. I cannot wait to see if you guys can make any changes to it before either you or I am dead in the coffin.
+
 ## The rise of Chromium
 
+Meanwhile, the web is watching. In all the years of Microsoft’s disasters after disasters, web technologies are rapidly evolving.
+
 ## Project Reunion
+
+## .NET MAUI
 
 ## Did Microsoft learn anything?
 
@@ -150,8 +201,13 @@ There you go, after traditional Windows APIs and WPF, here comes the third kind 
 [^3]: You can still do it in IDE’s designer when developing WPF applications, but it is no longer recommended.
 [^4]: Years later in 2021, Intel’s new CEO (also an Intel veteran), Pat Gelsinger reportedly said the quote in a report by [The Verge :octicons-link-external-16:](https://www.theverge.com/2021/1/15/22232554/intel-ceo-apple-lifestyle-company-cpus-comment). Referring to Apple Inc.
 [^5]: Quote source: [ZDNET report :octicons-link-external-16:](https://www.zdnet.com/article/ces-windows-to-run-on-arm-chips-says-microsoft/).
-[^6]: See LTT’s rant about Modern Standby: [:fontawesome-brands-youtube: Microsoft is Forcing me to Buy MacBooks - Windows Modern Standby](https://www.youtube.com/watch?v=OHKKcd3sx2c).
-[^7]: Time of General Availability (GA), Windows 8 RTM (Released to Manufacturing) was earlier on August 1, 2012.
+[^6]: See Linus Tech Tips’ rant about Modern Standby: [:fontawesome-brands-youtube: Microsoft is Forcing me to Buy MacBooks - Windows Modern Standby](https://www.youtube.com/watch?v=OHKKcd3sx2c).
+[^7]: Per time of General Availability (GA), Windows 8 RTM (Released to Manufacturing) was earlier on August 1, 2012.
 [^8]: Per Microsoft, *Metro* has always meant to be an internal codename only. Its other name, “Modern UI” came from Microsoft executive Qi Lu [on the MIXX conference :octicons-link-external-16:](https://news.microsoft.com/2012/10/01/qi-lu-iab-mixx-conference-keynote/). Later Microsoft confirmed ([ZDNET report :octicons-link-external-16:](https://www.zdnet.com/article/microsoft-design-language-the-newest-official-way-to-refer-to-metro/)) its official name as “Microsoft Design Language”.
 [^9]: Your milage may vary.
 [^10]: While “Desktop”, as a *Metro* app, is closed, all Windows desktop applications and their windows remained open. You normally cannot return to desktop until you click or tap the Desktop tile in the Start Menu again. This adds another layer of confusion to users.
+[^11]: Quote source: [:fontawesome-brands-youtube: Steve Jobs on Touch Screen PCs](https://www.youtube.com/watch?v=9TcJ45Y2z30).
+[^12]: At that time, Windows Store only offers packaged WinRT applications, packaged Win32 applications like what we have nowadays is not there until Windows 10.
+[^13]: See [Winaero’s registry tweak :octicons-link-external-16:](https://winaero.com/change-network-icon-click-action-in-windows-10/) to bring it back.
+[^14]: Fearing to break ancient software, when queried through Win32 APIs, the `10.0` version is only returned for apps that explicitly declared Windows 10 compatibility in their manifests, while for everyone else the NT kernel version of Windows 8.1 that is `6.3.9600` will be returned. If applications chose to retrieve version information through WMI (Windows Management Instrumentation), the actual version will be returned regardless of compatibility.
+[^15]: Referring to Satya Nadella, Microsoft’s new CEO after Steve Ballmer since February 2014.
