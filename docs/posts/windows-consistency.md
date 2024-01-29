@@ -1,6 +1,6 @@
 ---
 draft: true
-date: 2024-01-08
+date: 2024-01-29
 categories:
   - technology
   - microsoft
@@ -11,17 +11,13 @@ authors:
   - z4pf1sh
 ---
 
-# I - Relics & Consistency - The Unhinged Rant About Windows
+# A Rant About The Consistency of Windows
 
 Born on November 10, 1983, Windows, at the time still based on MS-DOS, finally introduces the graphical user interface (GUI) to people using IBM PC (or its clones).
 
 Follow the path of history, as we shed some light onto one of the greatest weaknesses in terms of user experience of Windows - historical relics and inconsistency.
 
 <!-- more -->
-
-!!! info "This series was written on a Mac"
-
-    Just like the Windows 95 boot sound[^1].
 
 It’s been 40 years since Windows was first introduced, and even longer for MS-DOS, which was introduced 2 years prior to Windows. Over almost half a century, Windows has evolved through many iterations. Its kernel, for example, has evolved from MS-DOS, to MS-DOS-based, to NT. Till now, the latest version of Windows is Windows 11. There is certainly no denying that every single modern operating system, including Windows, is a feat of engineering. But shiny as it is, Windows is a piece of software that is way too big. And history relics have found their way to today, some hiding in the corners, some visible everyday, most remain untouched for years. This creates a feel of inconsistency, making Windows messy and segmented, sharply visible in user interface.
 
@@ -138,7 +134,7 @@ There you go, after traditional Windows APIs and WPF, here comes the third kind 
 
 Fortunately, as WPF made so many radical advancements at its time, many of its concepts still carry their legacy till the Windows 8 era. *Metro* — I’ve got tired of this. To make it clear, one of the UI frameworks that came with Windows Runtime is called “Windows UI Library”, or WinUI for short. It’s used to create applications with the Microsoft Design Language. I drew the following diagram in an attempt to make things easier to understand.
 
-![The situation of Windows UI frameworks](../../img/windows-rant/pt1/winui-ancestry.svg)
+![The situation of Windows UI frameworks](../img/windows-consistency/winui-ancestry.svg)
 
 And don’t forget that all 3 of them have their respective style of UI:
 
@@ -166,7 +162,7 @@ All of a sudden, all third-party Win32 desktop applications were gone. WinRT bec
 
 Mind you, while WinRT is broken, it still has several features that are not available to Win32 applications: new touch-optimized MDL UI, notifications API, Windows settings sync integration, easy acquisition via Windows Store, one-click installation & uninstallation, etc. So, in other words, Win32 applications just plainly lacks the functionalities otherwise available on WinRT, so Win32 is bro...ken? I suppose? There is just no way to have the best of both worlds, and developers are getting increasingly frustrated. As the market for Windows RT is just beginning and is way too small, most developers chose the easy way out: just don’t invest in it and give it up. Yet the move from developers further restricted what users could do with Windows RT devices. It’s a death loop, a chicken-or-the-egg situation. In the end, for most developers and users who have actually tried to used a Windows RT, this is how they often feel like:
 
-![My disappointment is immeasurable and my day is ruined](../../img/windows-rant/pt1/disappointment.png)
+![My disappointment is immeasurable and my day is ruined](../img/windows-consistency/disappointment.png)
 
 The sales numbers clearly, and accurately represented this trainwreck. With poor sales and a $900 million loss, Microsoft only launched two Windows RT devices: the Surface (also known as Surface with Windows RT or Surface RT) and Surface 2. Later when it comes to the number^(3)^ that Gabe Newell allegedly cannot spell, only the Surface Pro stayed, and the numeric edition of Surface is nowhere to be found.
 
@@ -180,21 +176,84 @@ With UWP, aside from the shiny new design, developers can expect to build once o
 
 To make matters worse, it looks like Microsoft themselves are not into UWP, which is their own work, either. There is still a pile of Windows components with most of their UIs untouched since the Windows 9x days. Just press ++win+r++ for yourself. See how much it’s changed since Windows 98.
 
-![“Run” dialog of Windows 98](../../img/windows-rant/pt1/win98-run.png){ width="400" }
+![“Run” dialog of Windows 98](../img/windows-consistency/win98-run.png){ width="400" }
 
-![“Run” dialog of Windows 10](../../img/windows-rant/pt1/win10-run.png){ width="400" }
+![“Run” dialog of Windows 10](../img/windows-consistency/win10-run.png){ width="400" }
 
 Nice job Microsoft, you multi-trillion-dollar corporation. I cannot wait to see if you guys can make any changes to it before either you or I am dead in the coffin.
 
-## The rise of Chromium
+## The rise of the web
 
-Meanwhile, the web is watching. In all the years of Microsoft’s disasters after disasters, web technologies are rapidly evolving.
+Meanwhile, the web is watching. In all the years of Microsoft’s disasters after disasters, web technologies are rapidly evolving. Smartphones and tablets, exactly what Microsoft’s been fighting against all the time — are quickly becoming the first platform for newcomers to the Internet. People need to get their stuff done while on the go, mobile data is becoming cheaper, faster and more reliable, and smartphones and tablets are becoming increasingly powerful.
+
+In July of 2013, one month away from Windows 8.1’s release, GitHub launched an open-source framework called “Electron”. Its concept is to use web technologies (like the HTML, CSS and JavaScript trio) to create desktop applications. Later in February 2014, based on the Electron framework, the Atom editor was released — a full-fledged, desktop-grade application, just as if it’s native.
+
+It’s official: the web no longer just lives on your browser, it lives right on your desktop now.
+
+The bad news for Microsoft is that there are operating systems other than Microsoft Windows, and browsers other than Internet Explorer, and they run on those systems as well.
+
+For Microsoft, they may control Windows, but they do not control the web.
+
+Based on the Chromium browser, Electron is a milestone. Since Chromium runs on all three major desktop platforms: Linux, macOS (at the time still called OS X), and of course Microsoft Windows, apps built with Electron automatically run on all those platforms, except from time to time there may be some tweaking required. Thus Atom also runs on all three platforms, with an universal codebase, along some platform-specific changes. This is also great news for developers, as they no longer have to develop three apps for three platforms individually.
+
+Chromium is the open-source browser that powers Chrome, which slaughtered Internet Explorer, significantly crippling Microsoft’s monopolistic empire. Now it is thirsty for blood, looking to cripple the tilted empire once more.
+
+As Chromium continued to develop and web technologies became more and more sophisticated, a lot of problems in the early days of the web were solved, making Electron-based apps and similar closer to native step by step. Spellcheckers? 3D graphics? Offline functionalities? Even things WinRT apps could not do, like accessing the Windows registry and devices? Yes, yes, yes and yes. Turns out the Electron community supports their developers way better than bureaucratic Microsoft does. With JavaScript techniques and browser engines advancing day by day, and Microsoft stuck in their scattered history of frameworks after frameworks, the number of developers who jumped ships to embrace the web increased again and again. In the end, what’s more satisfying than having your one project run on multiple platforms seamlessly with minimal effort?
+
+The ironic thing is that it is so good that even Microsoft themselves recognized the value of it. Multiple Microsoft applications had since then been built with web technologies. Even Visual Studio 2016 has several node.js backends running in its process tree. Later in early 2019, Microsoft replaced the old (yet still looked modern), native Visual Studio Installer with a — you guessed it, an Electron-based Visual Studio Installer. The installer you downloaded from Microsoft is a very small WPF program to install the Electron-based Visual Studio Installer. Yes, you heard that right. You’ve actually downloaded a native installer to install the Electron-based Visual Studio Installer, the Visual Studio Installer-Installer. It wouldn’t be until 2021 that Microsoft finally replaced it with a native one based on WPF. If you need some laughs, see this [hilarious feedback :octicons-link-external-16:](https://developercommunity.visualstudio.com/t/cant-even-install-installer-in-offline-package/399364?viewtype=all) where due to a bug in Electron, even when performing offline setup, the Visual Studio Installer wouldn’t even start without a network connection in certain environments.
+
+Till Windows 11, Microsoft’s latest installment of this shite-show, their policy had usually been “quickly put out a web-based version of something before thinking about a way to implement it *(properly)* somehow in WPF or something else some time later”, like the integrated so-called *“Widgets”* ad-n-crap pop-up in Windows 11. Oh and the preinstalled crap called *Teams*! I absolutely love *Teams*! I love it so much that I’ve uninstalled it from countless Windows 11 PCs for countless times and shall continue doing so in the forseeable future so long as Microsoft and its management still decides to put unneeded crap and advertisements into their *“service”* that is called Windows.
 
 ## Project Reunion
 
-## .NET MAUI
+Remember the holy trinity of frameworks and design systems used to develop applications for Windows? You have classic, WPF and WinRT, now there are UWP (technically a successor of WinRT) and web-based applications with Electron (or similar frameworks) as well. It’s made Windows a five-point star that may stab any developer not careful enough when handling. Surprisingly, Microsoft did actually try to do something to fix this chaotic situation. They named it “Project Reunion”, with the goal of unifying the various frameworks for creating Windows applications.
 
-## Did Microsoft learn anything?
+The current situation is that for developers using Win32 APIs, when they want to use the modern Windows UI with MDL, they can’t, as they’re exclusive to WinRT apps. While for those who are developing WinRT apps, when they want to use the Win32 APIs otherwise unavailable in WinRT, they can’t, either. For whatever technology you choose, you will almost definitely be crippled at some points.
+
+To do something about this, Project Reunion is designed with the following goals in mind:
+
+- Allow apps to access both Win32 and WinRT APIs
+- Bring modern XAML-based UI design and resource management to Win32 apps
+- Make Win32 apps packageable with an identity with MSIX
+- Enable existing Win32 apps to use WinRT APIs with minimal changes
+- Follow Windows’s latest design language (Fluent Design)
+
+At the end of the day, Project Reunion is more like giving traditional Win32 apps a way to access the modern WinRT system previously exclusive to WinRT apps only. To developers, this is more or less an announcement of backstabbing, a sign of a slow step of UWP towards its grave. But on the bright side:
+
+- There are many(**_!_**) more apps in Win32 than UWP
+- Most APIs in Project Reunion are the same as or highly similar to UWP
+- Most XAML designs in UWP can be reused
+
+While some porting efforts will be required for everyone, Microsoft’s model kept everyone’s work to minimal, yet maintained the platform’s move in the right direction. Everything is looking great, except with Nadella behind the rudder, at this time, Microsoft has already largely shifted its focus from the four-colored flag (as explained below) to the new cash generator for them called Azure.
+
+??? note "The four-colored flag of Microsoft"
+
+    Ever wondered what did the four colors in the Windows flag and Microsoft’s new logo represent? In fact, each color is linked to a flagship product of Microsoft, as shown below.
+
+    | Color                  | Product                                                                   |
+    | :--------------------- | :------------------------------------------------------------------------ |
+    | :red_square: Red       | <span style="color: #f25022;">:material-microsoft-office:</span> Office   |
+    | :green_square: Green   | <span style="color: #0e7a0d;">:material-microsoft-xbox:</span> Xbox       |
+    | :blue_square: Blue     | <span style="color: #00a4ef;">:material-microsoft-windows:</span> Windows |
+    | :yellow_square: Yellow | <span style="color: #ffb900;">:material-microsoft-bing:</span> Bing       |
+
+As time moves on, the patience of developers is slowly wearing out, **again**. It’s now a recurring pattern that Microsoft puts some great _concepts_ out there, yet spends little _efforts_ on it. The initial versions of Project Reunion were rough, to say it nicely. It worked for neither Win32 developers nor UWP developers, or was missing (sometimes basic/necessary) features, or was either too complicated or too expensive to adopt to, sometimes both. Developers are surprised to find out that even in Microsoft’s own, flagship IDE, the familiar XAML editor does not feature a live UI preview (in which you can make modifications to widgets or at least preview what they may look like when the app is started) like before, whether with Win32 or UWP development. While someone may defend Microsoft as Project Reunion is still in its early days and just a beta, a “technical preview” not meant for production use. But on on March 29, 2021, it reached its first stable release, with a much more ambitious name called “Windows App SDK”, implying that this shall be the new, official paradigm for developing apps for Windows, instead of anything else. The new WinUI 3 framework is also shipped alongside WinAppSDK, featuring Microsoft’s latest and greatest Fluent Design system.
+
+But as everyone could see, the Designer for WinUI 3 projects is now [:fontawesome-brands-github: still missing](https://github.com/microsoft/microsoft-ui-xaml/issues/5917) from Visual Studio, the shiny Acrylic and Mica materials from Windows 10 and 11 are finally added in 1.3, the years long [:fontawesome-brands-github: simple `StackPanel` bug](https://github.com/microsoft/microsoft-ui-xaml/issues/916) is finally patched while this post is being composed, and developers are [:fontawesome-brands-github: questioning about its future](https://github.com/microsoft/microsoft-ui-xaml/discussions/8712).
+
+Personally, I still feel it as pretty much half-baked and broken. For small projects, the template is large with much boilerplate codes (10+ files) and added unnecessary complication. Most of those “helpers” can be part of the framework instead of being boilerplate.
+
+The biggest challenge for Microsoft is actually nothing about technologies, but rather real efforts put in to let developers trust them again. Microsoft’s commitment issue has been the *número uno* problem for them, as developers are running away to the much more reliable development platforms, like, the web, while unwilling to try out any technologies that Microsoft put out, afraid of being backstabbed with yet another Silverlight.
+
+## Conclusion
+
+Closing up, as of writing, the latest version of Windows is Windows 11, version 23H2, with rumors saying that Windows 12 may be on the horizon. But Windows is still a modern operating system with shattered historical relics spreading everywhere. You can see all kinds of UIs on Windows from Windows 3.1 all the way to the latest Windows 11. The file picker in “ODBC Data Sources” are from Windows 3.1, the Aero Wizard UIs are from Windows Vista and 7, the checkboxes in the Home Ribbon of Windows 10’s File Explorer are from Windows 8 and 8.1, and some UWP apps are targeting Windows 10 and using its version of Fluent UI on Windows 11. Not to mention the fact that Dark Mode introduced years ago is **still broken** for even **system apps** like Microsoft Management Console (like Device Manager and Event Viewer) and Control Panel (that still hasn’t been completely replaced). If you want some nice laughs, see [Xah Lee’s hilarious summary :octicons-link-external-16:](http://xahlee.info/w/windows_ui_inconsistency.html).
+
+Luckily I recently found out that Microsoft actually used their own frameworks for once. Many system applications are receiving major revamps with WinUI on Windows 11, like Paint, Task Manager (although very janky but thankfully finally had dark mode support), and recently (and surprisingly) to the “Windows Defender Firewall has blocked some features of this app” popup _(images via [Windows Report :octicons-link-external-16:](https://windowsreport.com/windows-11-redesigned-firewall-dialog-box/))_ as well.
+
+![WinUI-based Firewall Prompt](../img/windows-consistency/firewall-windows-11.png)
+
+See? It’s not like Redmond _can’t_ do it, it’s about if Redmond _wants_ to do it. It is all about commitment. While having a decent platform is a great start, having people staying onboard is the utmost important thing for the ship to continue sailing on the vast ocean of technological endeavors.
 
 [^1]: See the [Neowin report :octicons-link-external-16:](https://www.neowin.net/news/windows-95-start-up-music-composed-on-a-mac/).
 [^2]: Microsoft headquarters is located in Redmond, Washington, United States.
@@ -211,3 +270,4 @@ Meanwhile, the web is watching. In all the years of Microsoft’s disasters afte
 [^13]: See [Winaero’s registry tweak :octicons-link-external-16:](https://winaero.com/change-network-icon-click-action-in-windows-10/) to bring it back.
 [^14]: Fearing to break ancient software, when queried through Win32 APIs, the `10.0` version is only returned for apps that explicitly declared Windows 10 compatibility in their manifests, while for everyone else the NT kernel version of Windows 8.1 that is `6.3.9600` will be returned. If applications chose to retrieve version information through WMI (Windows Management Instrumentation), the actual version will be returned regardless of compatibility.
 [^15]: Referring to Satya Nadella, Microsoft’s new CEO after Steve Ballmer since February 2014.
+[^16]: The statement, which [aged well :octicons-link-external-16:](https://blogs.windows.com/windowsexperience/2021/08/31/windows-11-available-on-october-5/), was made by Microsoft employee Jerry Nixon [at the 2015 Ignite Conference :octicons-link-external-16:](https://www.theverge.com/2015/5/7/8568473/windows-10-last-version-of-windows). But remains [controversial :octicons-link-external-16:](https://www.pcworld.com/article/394724/why-is-there-a-windows-11-if-windows-10-is-the-last-windows.html) since it may be taken out of context by media or others.
