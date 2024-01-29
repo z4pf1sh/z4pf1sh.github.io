@@ -77,5 +77,9 @@ The service provider of this site is GitHub Pages by GitHub, Inc., a subsidiary 
 
 [Google Fonts :octicons-link-external-16:](https://fonts.google.com) hosted by Google LLC provides fonts delivery for this site. You may refer to [Google Fonts :material-arrow-right: Privacy and Data Collection :octicons-link-external-16:](https://developers.google.com/fonts/faq/privacy) for more information.
 
+## Trademark notices
+
+Contents on this website may include trademarks registered in the U.S. and/or other countries and regions. For referral purposes only, as they remain sole properties of their respective owners.
+
 [^1]: Definitely not British, you will NOT see words like "**programme**" and "**aluminium**" here.
 [^2]: Google, Inc. used to be my favorite company, but never for Google LLC.
