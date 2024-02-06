@@ -2,10 +2,8 @@
 draft: false
 date: 2024-01-01
 categories:
-  - technology
-  - microsoft
-  - history
-  - translation
+  - History
+  - Translation
 authors:
   - z4pf1sh-zh
 readtime: 15

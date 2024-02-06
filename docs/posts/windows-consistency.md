@@ -2,11 +2,7 @@
 draft: false
 date: 2024-01-29
 categories:
-  - technology
-  - microsoft
-  - windows
-  - winui
-  - ui
+  - History
 authors:
   - z4pf1sh
 ---

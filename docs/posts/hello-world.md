@@ -2,7 +2,7 @@
 draft: false
 date: 2023-12-31
 categories:
-  - meta
+  - Meta
 authors:
   - z4pf1sh
 ---
