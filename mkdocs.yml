@@ -67,6 +67,8 @@ plugins:
       enabled: !ENV [CI, false]
       assets: true
       assets_fetch: true
+      external_assets_exclude:
+        - giscus.app/*
   - rss:
       match_path: posts/.*
       date_from_meta:
