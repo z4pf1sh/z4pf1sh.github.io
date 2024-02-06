@@ -63,10 +63,6 @@ plugins:
         font_family: Noto Sans SC
         background_color: beige
         color: "#070707"
-  - privacy:
-      enabled: !ENV [CI, false]
-      assets: true
-      assets_fetch: true
   - rss:
       match_path: posts/.*
       date_from_meta:
