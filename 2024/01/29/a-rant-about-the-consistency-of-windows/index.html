@@ -1,0 +1,1267 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://z4pf1sh.github.io/2024/01/29/a-rant-about-the-consistency-of-windows/">
+      
+      
+        <link rel="prev" href="../../01/640-k-%E4%B9%8B%E5%A2%99/">
+      
+      
+        <link rel="next" href="../../../05/05/the-state-of-the-windows-app-sdk/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../../assets/icon-128.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+    
+    
+      
+        <title>A Rant About The Consistency of Windows - The Depths</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="A Rant About The Consistency of Windows - The Depths" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://z4pf1sh.github.io/assets/images/social/posts/windows-consistency.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://z4pf1sh.github.io/2024/01/29/a-rant-about-the-consistency-of-windows/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="A Rant About The Consistency of Windows - The Depths" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://z4pf1sh.github.io/assets/images/social/posts/windows-consistency.png" >
+      
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-rant-about-the-consistency-of-windows" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="The Depths" class="md-header__button md-logo" aria-label="The Depths" data-md-component="logo">
+      
+  <img src="../../../../assets/icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Depths
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A Rant About The Consistency of Windows
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Light Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2C5.13 2 2 5.13 2 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7M6 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H6v1m13-8h-2l-3.2 9h1.9l.7-2h3.2l.7 2h1.9L19 13m-2.15 5.65L18 15l1.15 3.65h-2.3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 18.54c2.13-.33 4.5-.54 7-.54v4H5c0-.65 3.2-2.14 8-3.1v-6.5c-.84.25-1.55.81-2 1.55a3.495 3.495 0 0 0-6 0c.03-3.58 3.5-6.52 8-6.91V7a1 1 0 0 1 1-1 1 1 0 0 1 1 1v.04c4.5.39 7.96 3.33 8 6.91a3.495 3.495 0 0 0-6 0c-.45-.74-1.16-1.3-2-1.56v6.15M7 2a5 5 0 0 1-5 5V2h5Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to System Setting"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to System Setting" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 20 .76-3c-3.26-.21-6.17-1.6-7.01-3.42-.09.48-.22.92-.42 1.25C4.67 16 3.33 16 2 16c1.1 0 1.5-1.57 1.5-3.5S3.1 9 2 9c1.33 0 2.67 0 3.33 1.17.2.33.33.77.42 1.25.65-1.42 2.57-2.57 4.91-3.1L9 5c2 0 4 0 5.33.67 1.13.56 1.78 1.6 2.36 2.71 2.92.7 5.31 2.28 5.31 4.12 0 1.88-2.5 3.5-5.5 4.16-.83 1.1-1.64 2.12-2.33 2.67-.84.67-1.5.67-2.17.67m5-9a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="The Depths" class="md-nav__button md-logo" aria-label="The Depths" data-md-component="logo">
+      
+  <img src="../../../../assets/icon.svg" alt="logo">
+
+    </a>
+    The Depths
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/history/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/meta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meta
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/translation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Translation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simpler-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simpler times
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enter-wpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enter WPF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipad-and-metro" class="md-nav__link">
+    <span class="md-ellipsis">
+      iPad and Metro
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="iPad and Metro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsofts-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft’s view
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intels-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intel’s view
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows 8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metro-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metro apps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-rt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows RT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#universal-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Universal Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rise-of-the-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      The rise of the web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-reunion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Reunion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/155286196" alt="z4pf1sh">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          z4pf1sh
+                        
+                      </strong>
+                      <br>
+                      Mysterious Life
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-01-29 00:00:00" class="md-ellipsis">January 29, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/history/">History</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              25 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+
+<h1 id="a-rant-about-the-consistency-of-windows">A Rant About The Consistency of Windows<a class="headerlink" href="#a-rant-about-the-consistency-of-windows" title="Permanent link">&para;</a></h1>
+<p>Born on November 10, 1983, Windows, at the time still based on MS-DOS, finally introduces the graphical user interface (GUI) to people using IBM PC (or its clones).</p>
+<p>Follow the path of history, as we shed some light onto one of the greatest weaknesses in terms of user experience of Windows - historical relics and inconsistency.</p>
+<!-- more -->
+
+<p>It’s been 40 years since Windows was first introduced, and even longer for MS-DOS, which was introduced 2 years prior to Windows. Over almost half a century, Windows has evolved through many iterations. Its kernel, for example, has evolved from MS-DOS, to MS-DOS-based, to NT. Till now, the latest version of Windows is Windows 11. There is certainly no denying that every single modern operating system, including Windows, is a feat of engineering. But shiny as it is, Windows is a piece of software that is way too big. And history relics have found their way to today, some hiding in the corners, some visible everyday, most remain untouched for years. This creates a feel of inconsistency, making Windows messy and segmented, sharply visible in user interface.</p>
+<h2 id="simpler-times">Simpler times<a class="headerlink" href="#simpler-times" title="Permanent link">&para;</a></h2>
+<p>Microsoft has a very terrible track record of maintaining stuff. From Silverlight to Zune, from Metro apps to UWP, some of which are confirmed <em>D-E-A-D</em> dead, while some are de-facto dead. This has always been a problem troubling Microsoft, despite it being still pretty manageable in the XP era. Back then, for native application development, Microsoft offered developers a simple option: <a href="https://en.wikipedia.org/wiki/Microsoft_Foundation_Class_Library"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m640 51.2-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg></span> Win32 MFC</a> with C or C++. While developing Windows XP, Microsoft was also working on something called “.NET Framework”, formerly “Next Generation Windows Services” - a revolutionary framework that was set to make native application development way easier, safer, more efficient and reliable than ever before.</p>
+<p>.NET Framework was a great idea, with C#, one the bundled languages, it introduced a <a href="https://en.wikipedia.org/wiki/Tracing_garbage_collection#Generational_GC_(ephemeral_GC)"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m640 51.2-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg></span> generational garbage collection</a> automatic memory management mechanism to developers familiar with C and C++ syntaxes, freeing them from the hassle of error-prone manual memory management. It’s like driving manual vs. automatic transmission cars. Sure, if you are skilled enough, manual could be better than automatic for 85% of the time, but for everyone else automatic is (way) better than manual for 99% of the time. Even better, as a brand new language with a brand new framework, Microsoft took their time to painstakingly wrap traditional C++ Win32 APIs into their brand new form in .NET Framework. Gone are the ugly <code>typedef</code>s like <code>LPCTWSTR</code> or obsolete ones like <code>DWORD</code>, say hello to the new, unified keywords like <code>string</code> and <code>int</code>. There is no need to listen for <a href="https://en.wikipedia.org/wiki/Message_loop_in_Microsoft_Windows"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m640 51.2-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg></span> Windows Messages</a>, just use events and their respective handlers. You don’t even need to write a main loop, the framework also does that for you, and events are automatically delivered to your application, rather than you having to actively retrieve it first. Things are looking great so far. Everything looks promising, and when it was released in February 13, 2002, developers are quickly adopting to this new piece of technology, in hope to improve their workflow and make future development easier and faster.</p>
+<p>The initial framework in .NET Framework for graphical user interfaces is Windows Forms. In a nutshell, it is a wrapper of Win32 APIs used to create native applications with native Windows controls and widgets. So things made with Windows Forms will look and behave just the same as if they’ve been written with Win32 APIs. Who doesn’t like it when you have more than one technical choices to achieve the same thing? As time went on, .NET Framework gained popularity among developers for its ease of use and overall better experience than C++ Win32 development. It seemed like Microsoft finally made a worthy, modern candidate to challenge the almighty Win32’s reign.</p>
+<h2 id="enter-wpf">Enter WPF<a class="headerlink" href="#enter-wpf" title="Permanent link">&para;</a></h2>
+<p>But unfortunately, at this point, Microsoft was already a very bureaucratic corporation. Somewhere in a small office in Redmond, WA<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, someone suggested that Windows Forms is just not <em>revolutionary</em> enough. Think about it, it was just a wrapper for the existing Win32 APIs that it was set to replace in the first place. How could you replace something when you still depend on it?</p>
+<p>The team came up with something codenamed “Avalon”, and planned to make some aggressive and radical technological advancements under the hood. First, UI composition will be accelerated by GPU with DirectX. Then, inspired by the web, the UI is now defined by XAML, instead of drag-and-drop in IDE<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> or bunches of repetitive <code>new()</code> and <code>Controls.Add()</code> calls. Proper high-DPI display support became a reality, and dynamic data binding is now the recommended standard approach. Its name is later revealed as “Windows Presentation Foundation”, or WPF for short. WPF was officially released in November 21, 2006, 4 years after Windows Forms. In a technological sense, WPF is a huge leap over Windows Forms. It is no longer just a wrapper for Win32 APIs, but a brand new framework with brand new architecture.</p>
+<p>However, as WPF no longer depends on the Win32 API set used by Windows Forms to composite UI, it needs to implement its own composition mechanism. Like any other WPF component, the rendering engine is built from the ground-up, requiring WPF itself to render controls mimicking the style and behavior of native Windows controls, as if they’ve been drawn with Win32 APIs. Despite all the hard work put into it, to users, it is still a simulation, and still gives out an odd feeling that something’s off. This is strike one in user interface inconsistency. On the bright side, though, WPF did a fantastic job of recreating the original Windows feel. In addition to the XP-style “Luna” theme, WPF also added Aero (Windows Vista and 7) and Metro (Windows 8 and 8.1) theme later, and will automatically try to use the best match for current version of Windows. In fact, if you feel nostalgic, you can even instruct WPF to render in Luna theme on Windows 11.</p>
+<details class="note">
+<summary>List of built-in themes of WPF</summary>
+<p>WPF has become open-source since late 2018, which made it easier for us to peek at its inside.
+A complete list of built-in themes of WPF could be found easily at its <a href="https://github.com/dotnet/wpf/tree/main/src/Microsoft.DotNet.Wpf/src/Themes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> GitHub repository</a>.</p>
+<p>As of writing, there are 8 built-in themes available:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Assembly</th>
+<th style="text-align: left;">XAML</th>
+<th style="text-align: left;">Theme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>PresentationFramework.Classic</code></td>
+<td style="text-align: left;"><code>Classic.xaml</code></td>
+<td style="text-align: left;">Windows Classic theme</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PresentationFramework.Luna</code></td>
+<td style="text-align: left;"><code>Luna.NormalColor.xaml</code></td>
+<td style="text-align: left;">Classic blue Luna theme</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PresentationFramework.Luna</code></td>
+<td style="text-align: left;"><code>Luna.Metallic.xaml</code></td>
+<td style="text-align: left;">Silver Luna theme</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PresentationFramework.Luna</code></td>
+<td style="text-align: left;"><code>Luna.HomeStead.xaml</code></td>
+<td style="text-align: left;">Olive Luna theme</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PresentationFramework.Royale</code></td>
+<td style="text-align: left;"><code>Royale.NormalColor.xaml</code></td>
+<td style="text-align: left;">Luna theme on Windows XP Media Center Edition</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PresentationFramework.Aero</code></td>
+<td style="text-align: left;"><code>Aero.NormalColor.xaml</code></td>
+<td style="text-align: left;">Aero theme on Windows Vista &amp; 7</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PresentationFramework.Aero2</code></td>
+<td style="text-align: left;"><code>Aero2.NormalColor.xaml</code></td>
+<td style="text-align: left;">Aero theme on Windows 8 &amp; 8.1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PresentationFramework.AeroLite</code></td>
+<td style="text-align: left;"><code>AeroLite.NormalColor.xaml</code></td>
+<td style="text-align: left;">Aero theme on Windows 10</td>
+</tr>
+</tbody>
+</table>
+<p>You can also see the <a href="https://learn.microsoft.com/en-us/archive/blogs/wpfsdk/using-themes-with-custom-controls">archived MSDN blog <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a> (now on Microsoft Learn) for reference.</p>
+</details>
+<details class="example">
+<summary>Applying styles to your own application</summary>
+<p>To use one of the built-in styles, Olive Luna, for example, make sure your <code>App.xaml</code> looked like this:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;Application</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;Application.Resources&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nt">&lt;ResourceDictionary&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span><span class="nt">&lt;ResourceDictionary.MergedDictionaries&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">                </span><span class="nt">&lt;ResourceDictionary</span><span class="w"> </span><span class="na">Source=</span><span class="s">&quot;/PresentationFramework.Luna,Version=0.0.0.0,PublicKeyToken=31bf3856ad364e35;component/Themes/Luna.HomeStead.xaml&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nt">&lt;/ResourceDictionary.MergedDictionaries&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&lt;/ResourceDictionary&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;/Application.Resources&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">&lt;/Application&gt;</span>
+</span></code></pre></div>
+<p>If you do not wish to apply it globally, you can apply it to specific windows as well. Just move the innermost part
+to the <code>&lt;Window.Resources&gt;</code> part and et voilà!</p>
+</details>
+<h2 id="ipad-and-metro">iPad and Metro<a class="headerlink" href="#ipad-and-metro" title="Permanent link">&para;</a></h2>
+<p>The iPad, released in April 2010, was set to fill the gap between smartphones and computers. It’s categorized as a “tablet computer”, and was a hit, which posed a significant threat to Microsoft and apparently caught them off guard. As part of Microsoft’s “strengthen the monopoly by making Windows run everywhere” plan, Microsoft decided that they better enter the tablet computer market as well. Coincidentally, as the other company in the <em>Wintel</em> alliance, Intel was also looking for a way to fight against the rise of smartphones and tablet computers. Neither of the two companies wanted the “lifestyle company in Cupertino”<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> to eat away their precious market share. So once again, the two giants sat down together to discuss about the future of Windows and PCs.</p>
+<h3 id="microsofts-view">Microsoft’s view<a class="headerlink" href="#microsofts-view" title="Permanent link">&para;</a></h3>
+<p>On Microsoft’s side, to make Windows run (well) on tablet computers, would obviously require a touch-first, or at least touch-friendly user interface, along with other major overhauls under the hood to make Windows “mobile” enough to compete with the iPad and others. But Microsoft seemed confident.</p>
+<blockquote>
+<p>Windows PCs will continue to adapt and evolve, and Windows will be everywhere on every kind of device without compromise.</p>
+<p>— Steve Ballmer, former CEO of Microsoft<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+</blockquote>
+<p>Nice one, Steve. For readers, please remember the “without compromise” statement, or you may miss some good laughs. As part of their plan, the next generation of Windows would feature:</p>
+<ul>
+<li>A new, touch-friendly UI</li>
+<li>An app ecosystem like the App Store</li>
+<li>Full UEFI boot support</li>
+<li>The ability to run on ARM-based systems</li>
+<li>Quick wake, sleep, boot up and shut down speed</li>
+</ul>
+<p>... and everything else to make Windows competitive enough against iPads running iOS.</p>
+<p>Microsoft also proposed something called “<a href="https://en.wikipedia.org/wiki/InstantGo"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m640 51.2-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg></span> Connected Standby</a>”, a feature allowing Windows devices to stay always connected to Wi-Fi networks to continuously receive messages and updates like tablet computers running iOS and Android, and have comparable responsiveness of them when going to sleep and waking up. It was a good concept, but was implemented so horribly that it will later be proven more as a trouble rather than convenience in the years to come<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>.</p>
+<h3 id="intels-view">Intel’s view<a class="headerlink" href="#intels-view" title="Permanent link">&para;</a></h3>
+<p>Meanwhile, on Intel’s side, some of the features proposed by Microsoft must be implemented by Intel to become a reality. And Intel also needs to figure out their stuff to enable x86 systems to fit in the form of a tablet computer. Here are some major differences between desktop and laptop PCs and tablet computers in terms of hardware:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">PCs</th>
+<th style="text-align: left;">Tablet computers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.64 21.97a.99.99 0 0 1-1.33-.47l-2.18-4.74-2.51 2.02c-.17.14-.38.22-.62.22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1c.24 0 .47.09.64.23l.01-.01 11.49 9.64a1.001 1.001 0 0 1-.44 1.75l-3.16.62 2.2 4.73c.26.5.02 1.09-.48 1.32l-3.62 1.69Z"/></svg></span> Input</td>
+<td style="text-align: left;">Mouse &amp; keyboard</td>
+<td style="text-align: left;">Multi-touch</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m.5-9c4.5 0 4.61 3.57 2.25 4.75-.99.49-1.43 1.54-1.62 2.47.48.2.9.51 1.22.91 3.7-2 7.68-1.21 7.68 2.37 0 4.5-3.57 4.6-4.75 2.23-.5-.99-1.56-1.43-2.49-1.62-.2.48-.51.89-.91 1.23 1.99 3.69 1.2 7.66-2.38 7.66-4.5 0-4.59-3.58-2.23-4.76.98-.49 1.42-1.53 1.62-2.45-.49-.2-.92-.52-1.24-.92C5.96 15.85 2 15.07 2 11.5 2 7 5.56 6.89 6.74 9.26c.5.99 1.55 1.42 2.48 1.61.19-.48.51-.9.92-1.22C8.15 5.96 8.94 2 12.5 2Z"/></svg></span> Thermal management</td>
+<td style="text-align: left;">Active</td>
+<td style="text-align: left;">Passive</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m6 2a6 6 0 0 0-6 6c0 3.31 2.69 6 6.1 6l-.88-2.23a1.01 1.01 0 0 1 .37-1.37l.86-.5a1.01 1.01 0 0 1 1.37.37l1.92 2.42A5.977 5.977 0 0 0 18 10a6 6 0 0 0-6-6m0 5a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-5 9a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m5.09-4.73 2.49 6.31 2.59-1.5-4.22-5.31-.86.5Z"/></svg></span> Storage media</td>
+<td style="text-align: left;">Mainly spinning</td>
+<td style="text-align: left;">Solid-state</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.4 7.5c.8.8.8 2.1 0 2.8l-2.8 2.8-7.8-7.8 2.8-2.8c.8-.8 2.1-.8 2.8 0l1.8 1.8 3-3 1.4 1.4-3 3 1.8 1.8m-5.8 5.8-1.4-1.4-2.8 2.8-2.1-2.1 2.8-2.8-1.4-1.4-2.8 2.8-1.5-1.4-2.8 2.8c-.8.8-.8 2.1 0 2.8l1.8 1.8-4 4 1.4 1.4 4-4 1.8 1.8c.8.8 2.1.8 2.8 0l2.8-2.8-1.4-1.4 2.8-2.9Z"/></svg></span> Connectivity</td>
+<td style="text-align: left;">Mainly wired</td>
+<td style="text-align: left;">Wireless</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6V9Z"/></svg></span> Level of integration</td>
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">High</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16.56 5.44-1.45 1.45A5.969 5.969 0 0 1 18 12a6 6 0 0 1-6 6 6 6 0 0 1-6-6c0-2.17 1.16-4.06 2.88-5.12L7.44 5.44A7.961 7.961 0 0 0 4 12a8 8 0 0 0 8 8 8 8 0 0 0 8-8c0-2.72-1.36-5.12-3.44-6.56M13 3h-2v10h2"/></svg></span> Power model</td>
+<td style="text-align: left;">On &amp; off</td>
+<td style="text-align: left;">Wake &amp; sleep, always on</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.67 4H15V2H9v2H7.33A1.33 1.33 0 0 0 6 5.33v15.33C6 21.4 6.6 22 7.33 22h9.33c.74 0 1.34-.6 1.34-1.33V5.33C18 4.6 17.4 4 16.67 4M11 20v-5.5H9L13 7v5.5h2"/></svg></span> Power budget</td>
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">Low (smaller batteries)</td>
+</tr>
+</tbody>
+</table>
+<p>To make x86 platform suitable for mobile computing on tablet computers, Intel’s job is far more complicated than simply putting new low-TDP Atom or Celeron CPUs onto the market. In order to fit in the limited space of tablet computers, they need to provide high level of integration by making not just CPUs, but SoCs (System on a Chip), combining functionalities previously enabled by chips on motherboard like audio into the processor. Intel also needs to renovate their platform to fit Microsoft’s needs, particularly when it comes to Connected Standby.</p>
+<h3 id="windows-8">Windows 8<a class="headerlink" href="#windows-8" title="Permanent link">&para;</a></h3>
+<p>In October 2012<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>, a disaster called Windows 8 was released. To end users, the most obvious change is of course the design. When Windows 8 is first booted, the user is greeted with the OOBE (Out-of-box experience) screen featuring the new, minimalist flat design called “Metro”<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>. If your graphics drivers are up and ready, the elegant, smooth animations and bold new colors will definitely give you a refreshing feel. Then you’re greeted with the brand new, full-screen Start Menu, maybe leaving you confused: where is my desktop? After spotting a rectangular tile called “Desktop” mixed in other rectangles, and a firm mouse click, congratulations, you have finally found your way to the familiar Windows desktop you know and love<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup>. Home sweet home, the recycle bin, the desktop wallpaper and the taskbar, they are all there, refreshed yet still with the spirit of Windows, and the Start But — wait, hold up, where has the Start Button gone?</p>
+<p>Great, now you have it. <em>It’s not a bug, it’s a feature.</em>™ The Start Button is officially gone. In Microsoft’s defense, you can still open Start Menu with the Start key on your keyboard, or the physical Start button on your tablet, or in the Charms menu. You can also move your mouse cursor to the bottom left corner of the screen, revealing the Start Button.</p>
+<p>Oh, and the Charms menu, one of the “corner/edge actions”, which features five submenus: Search, Share, Start (colored in current accent color), Devices, Settings, is a core design of Windows 8. As part of Windows 8’s touch-optimized design paradigm, gestures are important. For touch input, swiping left from the right edge brings up the Charms menu, swiping right from the left edge cycles through recently opened <em>Metro</em> apps and the Desktop, and swiping down from the top edge closes current app (including Desktop)<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup>. For mouse and keyboard input, move your mouse cursor to the two corners on the right side of the display, and then vertically to bring up the Charms menu. Move it to the two corners on the left side of the display and then vertically to bring up the recently opened <em>Metro</em> apps list. Clicking the top-left corner will cycle through recently opened <em>Metro</em> apps and the Desktop. Oh, you can also bring up the Charms menu by pressing <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-c">C</kbd></span> key combo.</p>
+<p>It’s already getting very boring and complicated. You thought to your self: “ok, I’ve had enough”. When you try to shut it down, if you’re on a tablet, then great, just hold the power button and swipe down when the meticulously crafted “Slide to shut down your PC” screen shows up. However, if you are unfortunately on a desktop or laptop, you may discover yet another surprise: “how the heck am I gonna shut this thing down” as there’s no freaking power button or menu on the Start Menu? Then you start searching for “how to shut down Windows 8”, as you find hundreds of thousands of confused users, just like you, asking the same question of how to turn off a computer, with Windows 8 installed. Turns out it’s buried so deeply into the Charms menu that pressing <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f4">F4</kbd></span> on the desktop and selecting Shut down, or even pressing <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span> and then typing <code>shutdown /s /t 0</code> is faster than using Charms menu to turn off the computer. To turn off your computer, open Charms menu however you like, then click or tap “Settings”, then “Power”, then “Shut down”. It was so bad that Microsoft quickly released Windows 8.1 exactly a year later in an attempt to fix the hate it received. Windows 8.1 brought back the Start Button, made it possible to enter the desktop once logged in, and added a power button on the Start Menu, among other fixes and touchups.</p>
+<h3 id="metro-apps">Metro apps<a class="headerlink" href="#metro-apps" title="Permanent link">&para;</a></h3>
+<p>I kept mentioning <em>Metro</em> apps, but did you really know what they are? They are also known as “Windows Store apps”, built on the new framework called “Windows Runtime” or WinRT (not to be confused with Windows RT, which we will discuss about later). Contrary to its name, it is not a runtime, but a new set of APIs for a new kind of applications that is <em>Metro</em> apps, they are mostly packaged, run in a sandbox, published to and acquired from Microsoft Store (formerly Windows Store), and require permissions and user approvals to use specific functionalities, kind of like on mobile operating systems such as Android and iOS. You can see it as Microsoft’s attempt to bring Android &amp; iOS-style apps to Windows. They all run full-screen, are touch-first, and share the Microsoft Design Language, which is Microsoft’s official name for the widely known <em>Metro</em> style.</p>
+<p>There you go, after traditional Windows APIs and WPF, here comes the third kind of applications on Windows. The good thing, and also a problem is that they all run on Windows 8. Counting the classic Windows style and the Ribbon UI introduced with Office 2007, Microsoft has already got at least 5 styles of user interfaces and 3 frameworks, scattered across the operating system.</p>
+<p>Fortunately, as WPF made so many radical advancements at its time, many of its concepts still carry their legacy till the Windows 8 era. <em>Metro</em> — I’ve got tired of this. To make it clear, one of the UI frameworks that came with Windows Runtime is called “Windows UI Library”, or WinUI for short. It’s used to create applications with the Microsoft Design Language. I drew the following diagram in an attempt to make things easier to understand.</p>
+<p><a class="glightbox" href="../../../../img/windows-consistency/winui-ancestry.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The situation of Windows UI frameworks" src="../../../../img/windows-consistency/winui-ancestry.svg" /></a></p>
+<p>And don’t forget that all 3 of them have their respective style of UI:</p>
+<ul>
+<li>the latest &amp; greatest Microsoft Design Language</li>
+<li>mimicked look of Win32 by WPF</li>
+<li>classic<sup><em>(authentic!)</em></sup> Win32 look</li>
+</ul>
+<p>The troubling thing is that they <strong>all</strong> run on Windows 8, with a <strong>majority</strong> of applications still on WPF or Win32, running on the desktop, and <strong>only</strong> MDL is touch-optimized by default. Just ask anyone who have used a Windows tablet before about the experience of touching those teeny tiny little buttons and controls designed for precision cursor input. I bet you’ll get negative feedback more often than less. The interfaces that most people interact with daily just simply don’t play well with touch.</p>
+<p>As for laptops with a touchscreen, things aren’t getting anywhere better, either. In addition to user interfaces that poorly fit touch input, the touch surface is often vertical and far from user’s normal reach. There’s a famous quote from Jobs:</p>
+<blockquote>
+<p>Touch surfaces don’t want to be vertical. It gives great demo. But after a short period of time, you start to fatigue. After an extended period of time, your arm wants to fall off. It doesn’t work. It’s ergonomically terrible. Touch surfaces want to be horizontal.</p>
+<p>— Steve Jobs, founder and former CEO of Apple<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup></p>
+</blockquote>
+<h3 id="windows-rt">Windows RT<a class="headerlink" href="#windows-rt" title="Permanent link">&para;</a></h3>
+<p>Laptops aside, another goal of Windows 8 is to have Windows running on tablet computers, sometimes with ARM processors, just like those it’s trying to compete against. Microsoft decided to launch a special version of Windows 8 dedicated to serve this purpose, which was later revealed as “Windows RT”. Windows RT runs on 32-bit ARMv7 systems. But being on a wholly new hardware architecture, none of the existing applications designed and compiled for x86 processors could run on it. Microsoft has always prioritized compatibility, but this time seems like not the case. As Windows RT strictly limits app choices for users to:</p>
+<ul>
+<li>Pre-loaded Windows desktop software</li>
+<li>Pre-loaded WinRT apps</li>
+<li>Windows Store apps<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup></li>
+</ul>
+<p>All of a sudden, all third-party Win32 desktop applications were gone. WinRT became the only viable target for developers trying to develop software for the platform that is Windows RT. Still, could be worse, as Microsoft’s own, flagship development tool, the Visual Studio, has absolutely <strong>ZERO</strong> support for this new platform. To make something for Windows RT, you still need a x86-based Windows PC, install Visual Studio there, do your development, and then deploy to the Windows RT device for testing. It was a huge freaking pain in the arse. Not to mention the situation that WinRT is still broken, as it just plainly lacks the functionalities otherwise available on Win32: there’s no access to the registry (which itself is a mountain of shite and crap), background activities are significantly limited to almost none, filesystem access is tightly restricted, etc.</p>
+<p>Mind you, while WinRT is broken, it still has several features that are not available to Win32 applications: new touch-optimized MDL UI, notifications API, Windows settings sync integration, easy acquisition via Windows Store, one-click installation &amp; uninstallation, etc. So, in other words, Win32 applications just plainly lacks the functionalities otherwise available on WinRT, so Win32 is bro...ken? I suppose? There is just no way to have the best of both worlds, and developers are getting increasingly frustrated. As the market for Windows RT is just beginning and is way too small, most developers chose the easy way out: just don’t invest in it and give it up. Yet the move from developers further restricted what users could do with Windows RT devices. It’s a death loop, a chicken-or-the-egg situation. In the end, for most developers and users who have actually tried to used a Windows RT, this is how they often feel like:</p>
+<p><a class="glightbox" href="../../../../img/windows-consistency/disappointment.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="My disappointment is immeasurable and my day is ruined" src="../../../../img/windows-consistency/disappointment.png" /></a></p>
+<p>The sales numbers clearly, and accurately represented this trainwreck. With poor sales and a $900 million loss, Microsoft only launched two Windows RT devices: the Surface (also known as Surface with Windows RT or Surface RT) and Surface 2. Later when it comes to the number<sup>(3)</sup> that Gabe Newell allegedly cannot spell, only the Surface Pro stayed, and the numeric edition of Surface is nowhere to be found.</p>
+<h2 id="universal-windows">Universal Windows<a class="headerlink" href="#universal-windows" title="Permanent link">&para;</a></h2>
+<p>Microsoft’s dream of conquering personal computing with Windows did not simply end with the demise of Windows RT. They still want Windows to run on everything, everywhere. With the release of "The Last Version of Windows"<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup>, namely Windows 10 in 2015, Microsoft fixed many mistakes and reverted many aggressive changes in Windows 8 and 8.1. Plus, two visual updates. First is for the Win32-based applications (a long-observed tradition as Microsoft typically gives them a refresh on major updates). Then, the Microsoft Design Language has officially evolved to MDL2. And good news! You can finally have your WinUI applications windowed instead of full-screen! Despite all the changes, Microsoft actually did not fully remove the Windows 8 legacy from Windows 10. In fact, if you install and open a WinRT app built for Windows 8, a minified Charms menu will appear in the title bar, exposing the features, and flyouts will pop out from the right edge of the app window when you click the corresponding menu items. Compatibility, huh? Heck, Microsoft even kept the Windows 8-style Networks flyout in Windows 10<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup>.</p>
+<p>For the first time, Microsoft did a significant bump of Windows 10’s NT kernel version from <code>6.3</code> in Windows 8 to <code>10.0</code> in Windows 10<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup>. And with Windows Phone, Xbox, and later HoloLens, there are 4 versions of Windows 10: Windows 10 Desktop, Windows 10 Mobile, Windows 10 Xbox, and Windows 10 HoloLens, each with their unique features and limitations. It’s now Nadella time<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup>, and maybe still vaguely remembering Ballmer’s <a href="https://www.youtube.com/watch?v=XxbJw8PrIkc"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></span> <em>Developers</em> song</a>, Microsoft decided to make developers’ lives a bit easier by putting out a unified platform based on WinRT, called Universal Windows Platform, or UWP for short. And the MDL2 design is now integrated with WinUI 2.</p>
+<p>With UWP, aside from the shiny new design, developers can expect to build once on their development machines, and their apps will run on all four editions of Windows 10. Plus a series of practical improvements like .NET Native, <code>{x:Bind}</code> support, light and dark mode support, system materials, <code>{ThemeResource}</code> namespace and many useful control improvements, including the new, long-awaited <code>Spacing</code> property for panel controls supporting automatic layouts. But many of those limits are still there, thus despite these advancements, UWP still cannot replace those creaking ancient Win32 applications in the forseeable future.</p>
+<p>To make matters worse, it looks like Microsoft themselves are not into UWP, which is their own work, either. There is still a pile of Windows components with most of their UIs untouched since the Windows 9x days. Just press <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span> for yourself. See how much it’s changed since Windows 98.</p>
+<p><a class="glightbox" href="../../../../img/windows-consistency/win98-run.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="“Run” dialog of Windows 98" src="../../../../img/windows-consistency/win98-run.png" width="400" /></a></p>
+<p><a class="glightbox" href="../../../../img/windows-consistency/win10-run.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="“Run” dialog of Windows 10" src="../../../../img/windows-consistency/win10-run.png" width="400" /></a></p>
+<p>Nice job Microsoft, you multi-trillion-dollar corporation. I cannot wait to see if you guys can make any changes to it before either you or I am dead in the coffin.</p>
+<h2 id="the-rise-of-the-web">The rise of the web<a class="headerlink" href="#the-rise-of-the-web" title="Permanent link">&para;</a></h2>
+<p>Meanwhile, the web is watching. In all the years of Microsoft’s disasters after disasters, web technologies are rapidly evolving. Smartphones and tablets, exactly what Microsoft’s been fighting against all the time — are quickly becoming the first platform for newcomers to the Internet. People need to get their stuff done while on the go, mobile data is becoming cheaper, faster and more reliable, and smartphones and tablets are becoming increasingly powerful.</p>
+<p>In July of 2013, one month away from Windows 8.1’s release, GitHub launched an open-source framework called “Electron”. Its concept is to use web technologies (like the HTML, CSS and JavaScript trio) to create desktop applications. Later in February 2014, based on the Electron framework, the Atom editor was released — a full-fledged, desktop-grade application, just as if it’s native.</p>
+<p>It’s official: the web no longer just lives on your browser, it lives right on your desktop now.</p>
+<p>The bad news for Microsoft is that there are operating systems other than Microsoft Windows, and browsers other than Internet Explorer, and they run on those systems as well.</p>
+<p>For Microsoft, they may control Windows, but they do not control the web.</p>
+<p>Based on the Chromium browser, Electron is a milestone. Since Chromium runs on all three major desktop platforms: Linux, macOS (at the time still called OS X), and of course Microsoft Windows, apps built with Electron automatically run on all those platforms, except from time to time there may be some tweaking required. Thus Atom also runs on all three platforms, with an universal codebase, along some platform-specific changes. This is also great news for developers, as they no longer have to develop three apps for three platforms individually.</p>
+<p>Chromium is the open-source browser that powers Chrome, which slaughtered Internet Explorer, significantly crippling Microsoft’s monopolistic empire. Now it is thirsty for blood, looking to cripple the tilted empire once more.</p>
+<p>As Chromium continued to develop and web technologies became more and more sophisticated, a lot of problems in the early days of the web were solved, making Electron-based apps and similar closer to native step by step. Spellcheckers? 3D graphics? Offline functionalities? Even things WinRT apps could not do, like accessing the Windows registry and devices? Yes, yes, yes and yes. Turns out the Electron community supports their developers way better than bureaucratic Microsoft does. With JavaScript techniques and browser engines advancing day by day, and Microsoft stuck in their scattered history of frameworks after frameworks, the number of developers who jumped ships to embrace the web increased again and again. In the end, what’s more satisfying than having your one project run on multiple platforms seamlessly with minimal effort?</p>
+<p>The ironic thing is that it is so good that even Microsoft themselves recognized the value of it. Multiple Microsoft applications had since then been built with web technologies. Even Visual Studio 2016 has several node.js backends running in its process tree. Later in early 2019, Microsoft replaced the old (yet still looked modern), native Visual Studio Installer with a — you guessed it, an Electron-based Visual Studio Installer. The installer you downloaded from Microsoft is a very small WPF program to install the Electron-based Visual Studio Installer. Yes, you heard that right. You’ve actually downloaded a native installer to install the Electron-based Visual Studio Installer, the Visual Studio Installer-Installer. It wouldn’t be until 2021 that Microsoft finally replaced it with a native one based on WPF. If you need some laughs, see this <a href="https://developercommunity.visualstudio.com/t/cant-even-install-installer-in-offline-package/399364?viewtype=all">hilarious feedback <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a> where due to a bug in Electron, even when performing offline setup, the Visual Studio Installer wouldn’t even start without a network connection in certain environments.</p>
+<p>Till Windows 11, Microsoft’s latest installment of this shite-show, their policy had usually been “quickly put out a web-based version of something before thinking about a way to implement it <em>(properly)</em> somehow in WPF or something else some time later”, like the integrated so-called <em>“Widgets”</em> ad-n-crap pop-up in Windows 11. Oh and the preinstalled crap called <em>Teams</em>! I absolutely love <em>Teams</em>! I love it so much that I’ve uninstalled it from countless Windows 11 PCs for countless times and shall continue doing so in the forseeable future so long as Microsoft and its management still decides to put unneeded crap and advertisements into their <em>“service”</em> that is called Windows.</p>
+<h2 id="project-reunion">Project Reunion<a class="headerlink" href="#project-reunion" title="Permanent link">&para;</a></h2>
+<p>Remember the holy trinity of frameworks and design systems used to develop applications for Windows? You have classic, WPF and WinRT, now there are UWP (technically a successor of WinRT) and web-based applications with Electron (or similar frameworks) as well. It’s made Windows a five-point star that may stab any developer not careful enough when handling. Surprisingly, Microsoft did actually try to do something to fix this chaotic situation. They named it “Project Reunion”, with the goal of unifying the various frameworks for creating Windows applications.</p>
+<p>The current situation is that for developers using Win32 APIs, when they want to use the modern Windows UI with MDL, they can’t, as they’re exclusive to WinRT apps. While for those who are developing WinRT apps, when they want to use the Win32 APIs otherwise unavailable in WinRT, they can’t, either. For whatever technology you choose, you will almost definitely be crippled at some points.</p>
+<p>To do something about this, Project Reunion is designed with the following goals in mind:</p>
+<ul>
+<li>Allow apps to access both Win32 and WinRT APIs</li>
+<li>Bring modern XAML-based UI design and resource management to Win32 apps</li>
+<li>Make Win32 apps packageable with an identity with MSIX</li>
+<li>Enable existing Win32 apps to use WinRT APIs with minimal changes</li>
+<li>Follow Windows’s latest design language (Fluent Design)</li>
+</ul>
+<p>At the end of the day, Project Reunion is more like giving traditional Win32 apps a way to access the modern WinRT system previously exclusive to WinRT apps only. To developers, this is more or less an announcement of backstabbing, a sign of a slow step of UWP towards its grave. But on the bright side:</p>
+<ul>
+<li>There are many(<strong><em>!</em></strong>) more apps in Win32 than UWP</li>
+<li>Most APIs in Project Reunion are the same as or highly similar to UWP</li>
+<li>Most XAML designs in UWP can be reused</li>
+</ul>
+<p>While some porting efforts will be required for everyone, Microsoft’s model kept everyone’s work to minimal, yet maintained the platform’s move in the right direction. Everything is looking great, except with Nadella behind the rudder, at this time, Microsoft has already largely shifted its focus from the four-colored flag (as explained below) to the new cash generator for them called Azure.</p>
+<details class="note">
+<summary>The four-colored flag of Microsoft</summary>
+<p>Ever wondered what did the four colors in the Windows flag and Microsoft’s new logo represent? In fact, each color is linked to a flagship product of Microsoft, as shown below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Color</th>
+<th style="text-align: left;">Product</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><img alt="🟥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e5.svg" title=":red_square:" /> Red</td>
+<td style="text-align: left;"><span style="color: #f25022;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.94 5.59v12.8q0 .67-.39 1.2-.39.52-1.05.7l-5.73 1.65q-.12.03-.27.06h-.22q-.33 0-.6-.09-.27-.09-.55-.24l-3.75-2.12q-.21-.12-.33-.31-.12-.19-.12-.43 0-.36.26-.61.25-.25.61-.25h4.86V6.14L9 7.44q-.43.16-.7.56-.27.38-.27.85v6.73q0 .42-.21.76-.2.34-.57.54l-1.72.94q-.24.13-.48.13-.41 0-.7-.29t-.29-.71V7.47q0-.52.27-.97.28-.5.73-.76l6.16-3.5q.21-.12.45-.18.24-.06.48-.06.17 0 .31.03.14.02.31.07l5.73 1.59q.33.09.59.27.26.18.45.43.2.26.3.56.1.31.1.64m-1.32 12.8V5.59q0-.23-.12-.4-.15-.19-.37-.23l-2.82-.78Q15 4.09 14.65 4q-.33-.11-.65-.19v16.4L18.13 19q.22-.04.37-.21.12-.17.12-.4Z"/></svg></span></span> Office</td>
+</tr>
+<tr>
+<td style="text-align: left;"><img alt="🟩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e9.svg" title=":green_square:" /> Green</td>
+<td style="text-align: left;"><span style="color: #0e7a0d;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.43 3.72c.07-.06.14-.12.19-.16C8.18 2.55 10 2 12 2c1.88 0 3.64.5 5.14 1.42.11.08.4.27.56.46C16.25 2.28 12 5.7 12 5.7c-1.5-1.13-2.83-1.9-3.84-2.2-.85-.21-1.43 0-1.7.2m12.88 1.51c-.05-.05-.1-.1-.14-.15-.36-.4-.82-.5-1.2-.47-.39.12-2.1.73-4.2 2.72 0 0 2.37 2.3 3.82 4.65 1.45 2.35 2.31 4.2 1.78 6.77C21 16.95 22 14.59 22 12c0-2.62-1-5-2.66-6.79m-3.61 7.75c-.65-.72-1.6-1.75-2.87-3.01-.27-.27-.56-.55-.86-.85 0 0-.47.46-1.07 1.07-.77.77-1.76 1.78-2.32 2.37-.98 1.05-3.8 4.35-3.96 6.2 0 0-.65-1.46.75-4.85.9-2.21 3.6-5.53 4.75-6.61 0 0-1.03-1.14-2.33-1.93l-.05-.03c-.63-.37-1.31-.66-1.97-.7-.67.05-1.09.54-1.09.54A9.954 9.954 0 0 0 2 12a10 10 0 0 0 10 10c2.93 0 5.57-1.26 7.4-3.27 0 0-.21-1.33-1.56-3.23-.31-.43-1.47-1.81-2.11-2.54Z"/></svg></span></span> Xbox</td>
+</tr>
+<tr>
+<td style="text-align: left;"><img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e6.svg" title=":blue_square:" /> Blue</td>
+<td style="text-align: left;"><span style="color: #00a4ef;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 12V6.75l6-1.32v6.48L3 12m17-9v8.75l-10 .15V5.21L20 3M3 13l6 .09v6.81l-6-1.15V13m17 .25V22l-10-1.91V13.1l10 .15Z"/></svg></span></span> Windows</td>
+</tr>
+<tr>
+<td style="text-align: left;"><img alt="🟨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f7e8.svg" title=":yellow_square:" /> Yellow</td>
+<td style="text-align: left;"><span style="color: #ffb900;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3v16l3.72 2L18 15.82v-4.09L9.77 8.95l1.61 3.89L13.94 14 8.7 16.92V4.27L5 3"/></svg></span></span> Bing</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>As time moves on, the patience of developers is slowly wearing out, <strong>again</strong>. It’s now a recurring pattern that Microsoft puts some great <em>concepts</em> out there, yet spends little <em>efforts</em> on it. The initial versions of Project Reunion were rough, to say it nicely. It worked for neither Win32 developers nor UWP developers, or was missing (sometimes basic/necessary) features, or was either too complicated or too expensive to adopt to, sometimes both. Developers are surprised to find out that even in Microsoft’s own, flagship IDE, the familiar XAML editor does not feature a live UI preview (in which you can make modifications to widgets or at least preview what they may look like when the app is started) like before, whether with Win32 or UWP development. While someone may defend Microsoft as Project Reunion is still in its early days and just a beta, a “technical preview” not meant for production use. But on on March 29, 2021, it reached its first stable release, with a much more ambitious name called “Windows App SDK”, implying that this shall be the new, official paradigm for developing apps for Windows, instead of anything else. The new WinUI 3 framework is also shipped alongside WinAppSDK, featuring Microsoft’s latest and greatest Fluent Design system.</p>
+<p>But as everyone could see, the Designer for WinUI 3 projects is now <a href="https://github.com/microsoft/microsoft-ui-xaml/issues/5917"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> still missing</a> from Visual Studio, the shiny Acrylic and Mica materials from Windows 10 and 11 are finally added in 1.3, the years long <a href="https://github.com/microsoft/microsoft-ui-xaml/issues/916"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> simple <code>StackPanel</code> bug</a> is finally patched while this post is being composed, and developers are <a href="https://github.com/microsoft/microsoft-ui-xaml/discussions/8712"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> questioning about its future</a>.</p>
+<p>Personally, I still feel it as pretty much half-baked and broken. For small projects, the template is large with much boilerplate codes (10+ files) and added unnecessary complication. Most of those “helpers” can be part of the framework instead of being boilerplate.</p>
+<p>The biggest challenge for Microsoft is actually nothing about technologies, but rather real efforts put in to let developers trust them again. Microsoft’s commitment issue has been the <em>número uno</em> problem for them, as developers are running away to the much more reliable development platforms, like, the web, while unwilling to try out any technologies that Microsoft put out, afraid of being backstabbed with yet another Silverlight.</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Closing up, as of writing, the latest version of Windows is Windows 11, version 23H2, with rumors saying that Windows 12 may be on the horizon. But Windows is still a modern operating system with shattered historical relics spreading everywhere. You can see all kinds of UIs on Windows from Windows 3.1 all the way to the latest Windows 11. The file picker in “ODBC Data Sources” is from Windows 3.1, the Aero Wizard UIs are from Windows Vista and 7, the checkboxes in the Home Ribbon of Windows 10’s File Explorer are from Windows 8 and 8.1, and some UWP apps are targeting Windows 10 and using its version of Fluent UI on Windows 11. Not to mention the fact that Dark Mode introduced years ago is <strong>still broken</strong> for even <strong>system apps</strong> like Microsoft Management Console (like Device Manager and Event Viewer) and Control Panel (that still hasn’t been completely replaced). If you want some nice laughs, see <a href="http://xahlee.info/w/windows_ui_inconsistency.html">Xah Lee’s hilarious summary <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a>.</p>
+<p>Luckily I recently found out that Microsoft actually used their own frameworks for once. Many system applications are receiving major revamps with WinUI on Windows 11, like Paint, Task Manager (although very janky but thankfully finally had dark mode support), and recently (and surprisingly) to the “Windows Defender Firewall has blocked some features of this app” popup <em>(images via <a href="https://windowsreport.com/windows-11-redesigned-firewall-dialog-box/">Windows Report <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a>)</em> as well.</p>
+<p><a class="glightbox" href="../../../../img/windows-consistency/firewall-windows-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="WinUI-based Firewall Prompt" src="../../../../img/windows-consistency/firewall-windows-11.png" /></a></p>
+<p>See? It’s not like Redmond <em>can’t</em> do it, it’s about if Redmond <em>wants</em> to do it. It is all about commitment. While having a decent platform is a great start, having people staying onboard is the utmost important thing for the ship to continue sailing on the vast ocean of technological endeavors.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>See the <a href="https://www.neowin.net/news/windows-95-start-up-music-composed-on-a-mac/">Neowin report <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Microsoft headquarters is located in Redmond, Washington, United States.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>You can still do it in IDE’s designer when developing WPF applications, but it is no longer recommended.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Years later in 2021, Intel’s new CEO (also an Intel veteran), Pat Gelsinger reportedly said the quote in a report by <a href="https://www.theverge.com/2021/1/15/22232554/intel-ceo-apple-lifestyle-company-cpus-comment">The Verge <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a>. Referring to Apple Inc.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Quote source: <a href="https://www.zdnet.com/article/ces-windows-to-run-on-arm-chips-says-microsoft/">ZDNET report <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a>.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>See Linus Tech Tips’ rant about Modern Standby: <a href="https://www.youtube.com/watch?v=OHKKcd3sx2c"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></span> Microsoft is Forcing me to Buy MacBooks - Windows Modern Standby</a>.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>Per time of General Availability (GA), Windows 8 RTM (Released to Manufacturing) was earlier on August 1, 2012.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>Per Microsoft, <em>Metro</em> has always meant to be an internal codename only. Its other name, “Modern UI” came from Microsoft executive Qi Lu <a href="https://news.microsoft.com/2012/10/01/qi-lu-iab-mixx-conference-keynote/">on the MIXX conference <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a>. Later Microsoft confirmed (<a href="https://www.zdnet.com/article/microsoft-design-language-the-newest-official-way-to-refer-to-metro/">ZDNET report <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a>) its official name as “Microsoft Design Language”.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>Your milage may vary.&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>While “Desktop”, as a <em>Metro</em> app, is closed, all Windows desktop applications and their windows remained open. You normally cannot return to desktop until you click or tap the Desktop tile in the Start Menu again. This adds another layer of confusion to users.&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>Quote source: <a href="https://www.youtube.com/watch?v=9TcJ45Y2z30"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></span> Steve Jobs on Touch Screen PCs</a>.&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>At that time, Windows Store only offers packaged WinRT applications, packaged Win32 applications like what we have nowadays is not there until Windows 10.&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>The statement, which <a href="https://blogs.windows.com/windowsexperience/2021/08/31/windows-11-available-on-october-5/">aged well <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a>, was made by Microsoft employee Jerry Nixon <a href="https://www.theverge.com/2015/5/7/8568473/windows-10-last-version-of-windows">at the 2015 Ignite Conference <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a>. But remains <a href="https://www.pcworld.com/article/394724/why-is-there-a-windows-11-if-windows-10-is-the-last-windows.html">controversial <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a> since it may be taken out of context by media or others.&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>See <a href="https://winaero.com/change-network-icon-click-action-in-windows-10/">Winaero’s registry tweak <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg></span></a> to bring it back.&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>Fearing to break ancient software, when queried through Win32 APIs, the <code>10.0</code> version is only returned for apps that explicitly declared Windows 10 compatibility in their manifests, while for everyone else the NT kernel version of Windows 8.1 that is <code>6.3.9600</code> will be returned. If applications chose to retrieve version information through WMI (Windows Management Instrumentation), the actual version will be returned regardless of compatibility.&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>Referring to Satya Nadella, Microsoft’s new CEO after Steve Ballmer since February 2014.&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <script src="https://giscus.app/client.js"
+    data-repo="z4pf1sh/z4pf1sh.github.io"
+    data-repo-id="R_kgDOK_ZIeQ"
+    data-category="Comments"
+    data-category-id="DIC_kwDOK_ZIec4Cc_St"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../01/640-k-%E4%B9%8B%E5%A2%99/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 640 K 之墙">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                640 K 之墙
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../05/05/the-state-of-the-windows-app-sdk/" class="md-footer__link md-footer__link--next" aria-label="Next: The State of The Windows App SDK">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                The State of The Windows App SDK
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2024 z4pf1sh // Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a> except where otherwise noted.<br /><a href="#__consent">Manage cookie settings</a> // <a href="/2023/12/31/hello/#trademark-notices">Trademark notices</a> // <a href="/2023/12/31/hello/#privacy-policy">Privacy Policy</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+<h4>Cookie consent</h4>
+<p>While the site maintainer does not directly collect any data from you, this site uses GitHub Pages for hosting and Google Fonts for fonts delivery. You may be subject to their respective Privacy Policies and Terms of Service.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" >
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tooltips", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "toc.follow", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
