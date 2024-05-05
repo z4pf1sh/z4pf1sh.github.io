@@ -29,6 +29,7 @@ theme:
   features:
     - content.code.copy
     - content.code.annotate
+    - content.tooltips
     - navigation.footer
     - navigation.instant
     - navigation.instant.progress
